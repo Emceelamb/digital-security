@@ -10,8 +10,8 @@
 - Ability: How far wil lI go to protect my assets?
 
 ## Communication without encryption
-Endpoint > Website > endpoint 
-Endpoint > wifi network operator > ISP > Lawful interception > unl4wfu1 1nterc3pt10n > Endpoint
+* Endpoint > Website > endpoint 
+* Endpoint > wifi network operator > ISP > Lawful interception > unl4wfu1 1nterc3pt10n > Endpoint
 
 ## Basic settings
 - turn off 3rd party cookies
