@@ -1,0 +1,27 @@
+#!/bin/bash
+
+signalcli=signal-cli -u +{Sender Phone Number}  send -m "Someone has logged in!" +{Recipient Phone Number}
+
+logA="{new log}"
+logB="{old log}"
+
+echo "Moving logs..."
+mv  $logA $logB
+echo "Finished moving logs."
+
+echo "Getting logs..."
+last -n 20 > $logA
+echo "Finished getting logs."
+
+
+
+DIFF=$(diff $logA $logB)
+
+echo $DIFF
+ if [ "$DIFF" != "" ]
+then
+    echo "Log has changed."
+    $signalcli
+else 
+    echo "Log has no change."
+fi
